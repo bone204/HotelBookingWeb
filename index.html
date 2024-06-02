@@ -1007,41 +1007,6 @@
                 // Trigger updateCheckInOutDates initially
                 updateCheckInOutDates();
             });
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const bookButton = document.getElementById('bookButton');
-
-                bookButton.addEventListener('click', async function() {
-                    const fullName = document.getElementById('customer-name').value;
-                    const identity = document.getElementById('customer-identity').value;
-                    const sex = document.getElementById('customer-sex').value;
-                    const birthDate = document.getElementById('customer-birth').value;
-                    const email = document.getElementById('customer-email').value;
-                    const phone = document.getElementById('customer-phone').value;
-                    const address = document.getElementById('customer-address').value;
-                    const nationality = document.getElementById('customer-nationality').value;
-
-
-                    const formData = {
-                        fullName,
-                        identity,
-                        sex,
-                        birthDate,
-                        email,
-                        phone,
-                        address,
-                        nationality
-                    };
-
-                    fetch("/contact", {
-                        method: "POST",
-                        headers:{
-                            "Content-type":"application/json"
-                        },
-                        body: JSON.stringify(formData)
-                    })
-                });
-            });
         </script>
     </div>
     
