@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Opera Saigon Hotel</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href=    "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <div id="main">
+        <!-- Begin: Header -->
+        <section id="header" class="flex_space">
+            <h1 id="logo">
+                La Opera Hotel
+            </h1>
+            <!-- Begin: Nav -->
+            <div class="navlink">
+                <ul id="nav">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#rooms">rooms</a></li>
+                    <li><a href="#service">services</a></li>
+                    <li><a href="#attractions">attractions</a></li>
+                    <li> <i class="fa-solid fa-search" style="color: #fff;"></i> </li>
+                    <li><button class="primary-btn" onclick="scrollToSection('rooms')">BOOK NOW</button></li>
+                </ul>
+                <span class="fa fa-bars" onclick="menutoggle()"></span>
+            </div>
+            <!-- End: Nav -->
+        </section>
+        <!-- End: Header -->
+
+        <!-- Begin: Slider -->
+        <section id="slider">
+            <div class="content">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="../assets/img/banner-1.jpg" alt="">
+                        <div class="text-content">
+                            <h1>Spend Your Holiday</h1>
+                            <p>The deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                            <div class="flex">
+                                <button class="primary-btn">READ MORE</button>
+                                <button class="secondary-btn" onclick="scrollToSection('contact')">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="../assets/img/banner-2.jpg" alt="">
+                        <div class="text-content">
+                            <h1>Spend Your Holiday</h1>
+                            <p>The deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                            <div class="flex">
+                                <button class="primary-btn">READ MORE</button>
+                                <button class="secondary-btn" onclick="scrollToSection('contact')">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="../assets/img/banner-3.jpg" alt="">
+                        <div class="text-content">
+                            <h1>Spend Your Holiday</h1>
+                            <p>The deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                            <div class="flex">
+                                <button class="primary-btn">READ MORE</button>
+                                <button class="secondary-btn" onclick="scrollToSection('contact')">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="../assets/img/banner-4.jpg" alt="">
+                        <div class="text-content">
+                            <h1>Spend Your Holiday</h1>
+                            <p>The deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                            <div class="flex">
+                                <button class="primary-btn">READ MORE</button>
+                                <button class="secondary-btn" onclick="scrollToSection('contact')">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="item">
+                        <img src="../assets/img/banner-5.jpg" alt="">
+                        <div class="text-content">
+                            <h1>Spend Your Holiday</h1>
+                            <p>The deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                            <div class="flex">
+                                <button class="primary-btn">READ MORE</button>
+                                <button class="secondary-btn" onclick="scrollToSection('contact')">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                dots: false,
+                navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            })
+        </script>
+        <!-- End: Slider -->
+
+        <!-- Begin: Book -->
+        <section id="book">
+            <div class="container flex_space">
+                <div class="text">
+                    <h1><span>Book </span> Your Room</h1>
+                </div>
+
+                <div class="form">
+                    <form class="grid" id="availabilityForm">
+                        <input id="arrivalDate" type="date" placeholder="Arrival Date">
+                        <input id="departureDate" type="date" placeholder="Departure Date">
+                        <input id="checkButton" class="primary-btn check-btn" type="submit" value="CHECK AVAILABILITY">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End: Book -->
+
+        <!-- Begin: About -->
+        <section id="about">
+            <div class="container flex">
+                <div class="left">
+                    <div class="heading">
+                        <h1>WELCOME</h1>
+                        <h2>La Opera Hotel</h2>
+                    </div>
+                    <p>Our slogan is “Where Elegant Memory Lasts”, the La Opera Saigon Hotel provides elegant customers with deep contemplation in the comfortable atmosphere through the warm smile of our staff, outstanding service, stylish restaurant, and luxurious lounge facing the Saigon River in HCM city.</p>
+                    <button class="primary-btn">ABOUT US</button>
+                </div>
+
+                <div class="right">
+                    <img src="../assets/img/about.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- End: About -->
+        
+        <!-- Begin: Counter -->
+        <section id="counter">
+            <div class="container grid">
+                <div class="box">
+                    <h1>2500</h1>
+                    <hr>
+                    <span>Customers</span>
+                </div>
+
+                <div class="box">
+                    <h1>1250</h1>
+                    <hr>
+                    <span>Happy Customers</span>
+                </div>
+
+                <div class="box">
+                    <h1>150</h1>
+                    <hr>
+                    <span>Expert Technicians</span>
+                </div>
+
+                <div class="box">
+                    <h1>3550</h1>
+                    <hr>
+                    <span>Desktop Reaired</span>
+                </div>
+            </div>
+        </section>
+        <!-- End: Counter -->
+
+        <!-- Begin: Rooms -->
+        <section id="rooms">
+            <div class="container">
+                <div class="heading">
+                    <h1>EXPLORE</h1>
+                    <h2>Our Rooms</h2>
+                    <p>Each room comes with a desk and a flat-screen TV, and certain rooms at the hotel have a balcony</p>
+                </div>
+
+                <div class="content mtop">
+                    <div class="owl-carousel owl-carousel1 owl-theme">
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/rooms-standard.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h2>Standard Room</h2>
+                                <div class="rate flex">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-user"></i>
+                                        <label>2 Adults</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <label>1 Double Bed</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-chart-area"></i>
+                                        <label>15 m&sup2</label>
+                                    </li>
+                                </ul>
+                                <p>The minimalist decor and well-appointed amenities to provide all with a haven of rest and an escape from the bustling city</p>
+                                <div class="button flex">
+                                    <select class="combobox roomQuantity" data-maloaip="1" data-price="1300000">
+                                        
+                                    </select>
+                                    <h3>₫1.300.000 <span> <br> Per Night</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/rooms-deluxe.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h2>Deluxe Room</h2>
+                                <div class="rate flex">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-user"></i>
+                                        <label>2 Adults</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <label>1 Queen Bed</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-chart-area"></i>
+                                        <label>25 m&sup2</label>
+                                    </li>
+                                </ul>
+                                <p>The minimalist decor and well-appointed amenities to provide all with a haven of rest and an escape from the bustling city</p>
+                                <div class="button flex">
+                                    <select class="combobox roomQuantity" data-maloaip="2" data-price="1500000">
+                                        
+                                    </select>
+                                    <h3>₫1.500.000 <span> <br> Per Night</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/rooms-premium.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h2>Premium Room</h2>
+                                <div class="rate flex">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-user"></i>
+                                        <label>2 Adults</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <label>1 Queen Bed</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-chart-area"></i>
+                                        <label>27 m&sup2</label>
+                                    </li>
+                                </ul>
+                                <p>The minimalist décor and well-appointed amenities to provide all with a haven of rest and an escape from the bustling city</p>
+                                <div class="button flex">
+                                    <select class="combobox roomQuantity" data-maloaip="3" data-price="1800000">
+
+                                    </select>
+                                    <h3>₫1.800.000 <span> <br> Per Night</span></h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/rooms-laopera.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h2>La Opera Saigon</h2>
+                                <div class="rate flex">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-user"></i>
+                                        <label>4 Adults</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-bed"></i>
+                                        <label>1 King Bed, 1 Queen Bed</label> 
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-chart-area"></i>
+                                        <label>30 m&sup2</label>
+                                    </li>
+                                </ul>
+                                <p>The minimalist decor and well-appointed amenities to provide all with a haven of rest and an escape from the bustling city</p>
+                                <div class="button flex">
+                                    <select class="combobox roomQuantity" data-maloaip="4" data-price="2000000">
+
+                                    </select>
+                                    <h3>₫2.000.000 <span> <br> Per Night</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <button class="primary-btn js-book-room">BOOK NOW</button>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:false,
+                margin: 40,
+                nav:true,
+                dots: false,
+                mouseDrag: false,
+                navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:2,
+                        margin: 10,
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+            })
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const roomQuantities = document.querySelectorAll('.combobox.roomQuantity'); // Chọn tất cả các combobox có class 'roomQuantity'
+                const bookButton = document.querySelector('.js-book-room'); // Chọn nút "BOOK NOW"
+
+                // Hàm kiểm tra xem tất cả các combobox có giá trị khác 0 không
+                function validateRoomQuantities() {
+                    let allZero = true;
+
+                    roomQuantities.forEach(roomQuantity => {
+                        if (parseInt(roomQuantity.value) !== 0) {
+                            allZero = false;
+                        }
+                    });
+
+                    return !allZero; // Trả về true nếu có ít nhất một combobox có giá trị khác 0
+                }
+
+                // Xử lý khi combobox thay đổi giá trị
+                roomQuantities.forEach(roomQuantity => {
+                    roomQuantity.addEventListener('change', function() {
+                        // Kiểm tra lại điều kiện sau khi combobox thay đổi giá trị
+                        if (validateRoomQuantities()) {
+                            bookButton.disabled = false; // Kích hoạt nút "BOOK NOW"
+                        } else {
+                            bookButton.disabled = true; // Vô hiệu hóa nút "BOOK NOW"
+                        }
+                    });
+                });
+
+                // Kiểm tra điều kiện ban đầu
+                if (validateRoomQuantities()) {
+                    bookButton.disabled = false; // Kích hoạt nút "BOOK NOW"
+                } else {
+                    bookButton.disabled = true; // Vô hiệu hóa nút "BOOK NOW"
+                }
+            });
+
+        </script>
+        <!-- End: Rooms -->
+
+        <!-- Begin: Gallery -->
+        <section id="gallery">
+            <div class="container">
+                <div class="heading">
+                    <h1>PHOTOS</h1>
+                    <h2>Our Gallery</h2>
+                    <p>We provide complimentary internet for both lobby, restaurant and guest rooms</p>
+                </div>
+            </div>
+            <div>
+                <div class="content mtop">
+                    <div class="owl-carousel owl-carousel1 owl-theme">
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-6.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="../assets/img/gallery-8.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin: 0,
+                nav:true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHover: true,
+                navText: "",
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:4,
+                    },
+                    1000:{
+                        items:6
+                    }
+                }
+            })
+        </script>
+        <!-- End: Gallery -->
+
+        <!-- Begin: Service -->
+        <section id="service">
+            <div class="container">
+                <div class="heading">
+                    <h1>SERVICES</h1>
+                    <h2>Our Services</h2>
+                    <p>We provide exceptional hospitality and personalized services to ensure a memorable and comfortable stay</p>
+                </div>
+            </div>
+
+            <div class="content flex_space">
+                <div class="left grid2">
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <h3>Delicious Food</h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-person-swimming"></i>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-utensils"></i>
+                            <h3>Inhouse Restaurant</h3>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <i class="fa-solid fa-spa"></i>
+                            <h3>Beautiful Spa</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="../assets/img/services.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- End: Service -->
+
+        <!-- Begin: Customer -->
+        <section id="customer">
+            <div class="container">
+                <div class="owl-carousel owl-carousel2 owl-theme">
+                    <div class="item">
+                        <i class="fa-solid fa-quote-right"></i>
+                        <p>I had a wonderful experience staying at this hotel. The service was impeccable—every staff member was friendly and attentive, ensuring that all my needs were met promptly. The room was exceptionally clean and well-appointed, with modern amenities that made my stay comfortable and enjoyable. The location was perfect, conveniently situated near attractions and transportation hubs. What truly stood out was the level of hospitality and care provided by the hotel staff—they went above and beyond to make my stay memorable. I highly recommend this hotel to anyone looking for a top-notch accommodation experience.</p>
+                        <h3>Mikasa Ackerman</h3>
+                        <label>Mikasa Ackerman</label>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-quote-right"></i>
+                        <p>I recently had the pleasure of staying at this exceptional hotel and it truly exceeded my expectations. From the moment I arrived, I was greeted warmly by the attentive staff who ensured a smooth check-in process. The service throughout my stay was impeccable—every staff member, from the front desk to the housekeeping team, was friendly, professional, and eager to assist. The room itself was a haven of comfort and luxury, meticulously clean and tastefully decorated. I particularly enjoyed the plush bedding and the stunning views from my window. The hotel's location was ideal, within easy reach of popular landmarks and dining options. What truly set this hotel apart was the outstanding level of hospitality—I felt genuinely cared for throughout my visit.</p>
+                        <h3>Eren Yeager</h3>
+                        <label>Eren Yeager</label>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-quote-right"></i>
+                        <p>I had the most delightful experience during my recent stay at this superb hotel. The level of service was truly outstanding—every interaction with the staff was characterized by warmth, professionalism, and genuine care. From the moment I checked in, I was impressed by the attention to detail and the efforts made to ensure my comfort. The room was not only impeccably clean but also elegantly designed, with modern amenities that enhanced my stay. The bed was incredibly comfortable, guaranteeing a restful night's sleep. What also stood out was the hotel's commitment to guest satisfaction—the staff was proactive in addressing any requests and went above and beyond to exceed expectations.</p>
+                        <h3>John Wick</h3>
+                        <label>John Wick</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin: 0,
+                dots: true,
+                nav: false,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:1,
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            })
+        </script>
+        <!-- End: Customer -->
+
+        <!-- Begin: Attractions -->
+        <section id="attractions">
+            <div class="container">
+                <div class="heading">
+                    <h1>ATTRACTIONS</h1>
+                    <h2>Local Attractions</h2>
+                    <p>Discover the best of HCM City with our curated list of local attractions and activities</p>
+                </div>
+            </div>
+
+            <div class="content flex_space">
+                <div class="left grid2">
+                    <div class="item">
+                        <div class="image">
+                            <img src="../assets/img/attraction-1.jpg" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h2>Saigon Opera House</h2>
+                            <p>As the Municipal Theatre of Ho Chi Minh City, the Saigon Opera House was built in the late 19th century, and at one point was used as the home of the Lower House assembly of South Vietnam</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="image">
+                            <img src="../assets/img/attraction-2.jpg" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h2>Nguyen Hue Street</h2>
+                            <p>The first pedestrian-only street in Ho Chi Minh is also considered as one of the most beautiful streets in Ho Chi Minh City with lively decorations and water fountain system</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="box flex">
+                        <div class="image">
+                            <img src="../assets/img/attraction-3.jpg" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h2>Le Van Tam Park</h2>
+                            <p>Swing by and watch, or even take part in, the many vibrant activities in the one of the major, centrally located parks in Saigon</p>
+                        </div>
+                    </div>
+
+                    <div class="box flex">
+                        <div class="image">
+                            <img src="../assets/img/attraction-4.jpg" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h2>Independence Palace</h2>
+                            <p>The Independence Palace was both the home, and the workplace, for the President of South Vietnam during the Vietnam War</p>
+                        </div>
+                    </div>
+
+                    <div class="box flex">
+                        <div class="image">
+                            <img src="../assets/img/attraction-5.jpg" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h2>Ben Thanh Market</h2>
+                            <p>One of the earliest surviving structures in Saigon, Ben Thanh Market is an important symbol of Ho Chi Minh City</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End: Attractions -->
+
+        <!-- Begin: Contact -->
+        <footer id="contact">
+            <div class="container grid">
+                <div class="box">
+                    <img src="../assets/img/logo.png" alt="">
+                    <p>Located in the vibrant heart of the city, our distinguished hotel welcomes guests with a perfect blend of elegance, comfort, and impeccable service. Situated amidst bustling streets and cultural attractions, our establishment offers a serene oasis where guests can unwind and indulge in luxurious accommodations.</p>
+                    <div class="icon">
+                        <a href="https://www.facebook.com/laoperasaigonhotel"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/la.opera.saigon.hotel"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/watch?v=Or4L9qUNDT0"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="box"></div>
+
+                <div class="box">
+                    <h2>Contact Us</h2>
+                    <p>Our dedicated staff is committed to providing exceptional service, catering to the needs of both leisure and business travelers alike.</p>
+                    <ul>
+                        <li>
+                            <i class="fa fa-location-dot"></i>
+                            <label>No 1, Ngo Van Nam street, Ben Nghe Ward, District 1, Ho Chi Minh City, Viet Nam</label> 
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <label>+84 912.25.25.25</label>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <label>info@laoperasghotel.com</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- End: Contact -->
+   </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-body modal-grid">
+                <div class="modal-close js-modal-close">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="grid-left">
+                    <div class="modal-header">
+                        <div class="icon">
+                            <i class="fa-solid fa-pen"></i>
+                        </div>
+                        <div class="modal-content">
+                            <h3>Make a Reservation</h3>
+                            <p>Fill information bellow to booking room</p>
+                        </div>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-grid-left">
+                            <label for="customer-name" class="modal-label">
+                                Full Name:
+                            </label>
+                            <input id="customer-name" type="text" class="modal-input" placeholder="Enter full name..." name="TENKH">
+            
+                            <label for="customer-identity" class="modal-label">
+                                CCCD / Passport:
+                            </label>
+                            <input id="customer-identity" type="text" class="modal-input" placeholder="Enter cccd / passport..." name="CCCD">
+        
+                            <label for="customer-sex" class="modal-label">
+                                Sex:
+                            </label>
+                            <select id="customer-sex" class="modal-combobox" name="GIOITINH">
+                                <option value="" disabled selected>Select sex</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+        
+                            <label for="customer-birth" class="modal-label">
+                                Date Of Birth:
+                            </label>
+                            <input id="customer-birth" type="date" class="modal-date-input" name="NGAYSINH">
+                        </div>
+        
+                        <div class="info-grid-right">
+                            <label for="customer-email" class="modal-label">
+                                Email:
+                            </label>
+                            <input id="customer-email" type="email" class="modal-input" placeholder="Enter email..." name="EMAIL">
+        
+                            <label for="customer-phone" class="modal-label">
+                                Phone Number:
+                            </label>
+                            <input id="customer-phone" type="text" class="modal-input" placeholder="Enter phone number..."name="SDT">
+        
+                            <label for="customer-address" class="modal-label">
+                                Address:
+                            </label>
+                            <input id="customer-address" type="text" class="modal-input" placeholder="Enter address..." name="DIACHI">
+        
+                            <label for="customer-nationality" class="modal-label">
+                                Nationality:
+                            </label>
+                            <select id="customer-nationality" class="modal-combobox" name="QUOCTICH">
+                                <option value="" disabled selected>Select nation</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="grid-right">
+                    <div class="grid-top">
+                        <div class="modal-header">
+                            <div class="icon">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div class="modal-content">
+                                <h3>Make a Purchase</h3>
+                                <p>Review information below to complete order</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-bottom">
+                        <div class="info-container">
+                            <div class="check-date">
+                                <div class="checkin-date">
+                                    Check-in date:
+                                </div>
+
+                                <div class="checkout-date">
+                                    Check-out date:
+                                </div>
+    
+                            </div>
+                            <div class="table">
+                                <div class="row header">
+                                    <div class="cell">Room</div>
+                                    <div class="cell">Quantity</div>
+                                    <div class="cell">Nights</div>
+                                    <div class="cell">Price</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bill-container">
+                            <div class="modal-bill">
+                                <div class="bill">
+                                    <div class="bill-header">
+                                        <div class="header-item">Price:</div>
+                                        <div class="header-item">Discount:</div>
+                                        <div class="header-item">Total:</div>
+                                    </div>
+                                    <div class="bill-content">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="modal-submit">
+                                <button class="third-btn modal-button c-btn">Cancel</button>
+                                <button class="third-btn modal-button b-btn" id="bookButton">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Danh sách các id mà bạn muốn xử lý
+                var ids = ['customer-sex', 'customer-birth', 'customer-nationality'];
+
+                // Lặp qua mỗi id trong danh sách
+                ids.forEach(function(id) {
+                    var element = document.getElementById(id);
+
+                    // Bắt sự kiện khi phần tử thay đổi
+                    element.addEventListener('change', function() {
+                        // Kiểm tra xem có option nào được chọn không
+                        if (element.value !== '') {
+                            // Thêm class 'selected' vào phần tử để áp dụng CSS khi được chọn
+                            element.classList.add('selected');
+                        } else {
+                            // Nếu không có option nào được chọn, loại bỏ class 'selected'
+                            element.classList.remove('selected');
+                        }
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const roomQuantities = document.querySelectorAll('.combobox');
+                const billContent = document.querySelector('.bill-content');
+                const arrivalInput = document.getElementById('arrivalDate');
+                const departureInput = document.getElementById('departureDate');
+
+                // Hàm tính số đêm giữa hai ngày
+                function calculateNumberOfNights(startDate, endDate) {
+                    const start = new Date(startDate);
+                    const end = new Date(endDate);
+                    const timeDifference = end.getTime() - start.getTime();
+                    const numberOfNights = Math.ceil(timeDifference / (1000 * 3600 * 24)); // Chuyển từ milliseconds sang đơn vị ngày và làm tròn lên
+                    return numberOfNights;
+                }
+
+                function updateCheckInOutDates() {
+                    roomQuantities.forEach(roomQuantity => {
+                        roomQuantity.addEventListener('change', function() {
+                            const selectedRoomsTable = document.querySelector('.table');
+                            const arrivalDate = arrivalInput.value;
+                            const departureDate = departureInput.value;
+                            // Xóa các hàng cũ trừ header
+                            while (selectedRoomsTable.children.length > 1) {
+                                selectedRoomsTable.removeChild(selectedRoomsTable.lastChild);
+                            }
+
+                            // Khởi tạo biến để lưu trữ tổng giá và tổng giảm giá
+                            let price = 0;
+                            let totalQuantity = 0;
+                            let totalNights = 0;
+                            let discount = 0;
+                            let totalDiscount = 0;
+                            let discountExplanation = '';
+
+                            // Xóa các hàng cũ trong phần bill trừ header
+                            while (billContent.children.length > 0) {
+                                billContent.removeChild(billContent.lastChild);
+                            }   
+
+                            // Lặp qua từng phòng để thêm vào bảng
+                            roomQuantities.forEach(room => {
+                                const quantity = parseInt(room.value);
+                                const numberOfNights = calculateNumberOfNights(arrivalDate, departureDate);
+                                const roomName = room.parentElement.parentElement.querySelector('h2').textContent;
+                                const roomPrice = parseInt(room.parentElement.querySelector('h3').textContent.replace(/[₫,.]/g, ''));
+
+                                if (quantity > 0) {
+                                    const totalPrice = quantity * roomPrice * numberOfNights;
+                                    price += totalPrice; // Cộng dồn vào tổng giá
+                                    totalQuantity += quantity;
+
+                                    // Tạo một hàng mới
+                                    const row = document.createElement('div');
+                                    row.classList.add('row');
+
+                                    // Tạo các ô dữ liệu cho hàng
+                                    const roomCell = document.createElement('div');
+                                    roomCell.classList.add('cell');
+                                    roomCell.textContent = roomName;
+                                    row.appendChild(roomCell);
+
+                                    const quantityCell = document.createElement('div');
+                                    quantityCell.classList.add('cell');
+                                    quantityCell.textContent = quantity;
+                                    row.appendChild(quantityCell);
+
+                                    const nightCell = document.createElement('div');
+                                    nightCell.classList.add('cell');
+                                    nightCell.textContent = numberOfNights;
+                                    row.appendChild(nightCell);
+
+                                    const totalPriceCell = document.createElement('div');
+                                    totalPriceCell.classList.add('cell');
+                                    totalPriceCell.textContent = `${totalPrice.toLocaleString()} đ`;
+                                    row.appendChild(totalPriceCell);
+
+                                    // Thêm hàng vào bảng sau header
+                                    selectedRoomsTable.insertAdjacentElement('beforeend', row);
+                                }
+                            });
+                            // Tính toán tổng giảm giá
+                            if(totalQuantity === 1)
+                            {
+                                totalDiscount = 0;
+                                discountExplanation = '(No discount applied)'
+                            }
+
+                            if(totalQuantity === 2)
+                            {
+                                totalDiscount = price * 0.05;
+                                discountExplanation = '(5% off for 2 rooms)';
+                            }
+
+                            if (totalQuantity >= 3 && totalQuantity <=5)
+                            {
+                                totalDiscount = price * 0.1;
+                                discountExplanation = '(10% off for 3-5 rooms)';
+                            }
+
+                            if (totalQuantity > 5) {
+                                totalDiscount = price * 0.2;
+                                discountExplanation = '(20% off for 6+ rooms)';
+                            }
+                            // Tính toán tổng thanh toán cuối cùng
+                            const finalTotal = price - totalDiscount;
+
+                            // Cập nhật nội dung trong phần bill content    
+                            const priceContent = document.createElement('div');
+                            priceContent.classList.add('content-item');
+                            priceContent.textContent = `${price.toLocaleString()} đ`;
+                            billContent.appendChild(priceContent);
+
+                            const discountContent = document.createElement('div');
+                            discountContent.classList.add('content-item');
+                            discountContent.textContent = `- ${totalDiscount.toLocaleString()} đ`;
+                            billContent.appendChild(discountContent);
+
+                            const totalContent = document.createElement('div');
+                            totalContent.classList.add('content-item');
+                            totalContent.textContent = `${finalTotal.toLocaleString()} đ`;
+                            billContent.appendChild(totalContent);
+
+                            // Cập nhật nội dung cho phần Header của Bill
+                            const headerDiscount = document.querySelector('.header-item:nth-child(2)');
+                            const headerDiscountText = `Discount ${discountExplanation}:`;
+                            headerDiscount.textContent = headerDiscountText;
+                        });
+                    });
+
+                    roomQuantities.forEach(roomQuantity => {
+                        roomQuantity.dispatchEvent(new Event('change'));
+                    });
+                }
+
+                arrivalInput.addEventListener('change', updateCheckInOutDates);
+                departureInput.addEventListener('change', updateCheckInOutDates);
+
+                // Trigger updateCheckInOutDates initially
+                updateCheckInOutDates();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const bookButton = document.getElementById('bookButton');
+
+                bookButton.addEventListener('click', async function() {
+                    const fullName = document.getElementById('customer-name').value;
+                    const identity = document.getElementById('customer-identity').value;
+                    const sex = document.getElementById('customer-sex').value;
+                    const birthDate = document.getElementById('customer-birth').value;
+                    const email = document.getElementById('customer-email').value;
+                    const phone = document.getElementById('customer-phone').value;
+                    const address = document.getElementById('customer-address').value;
+                    const nationality = document.getElementById('customer-nationality').value;
+
+
+                    const formData = {
+                        fullName,
+                        identity,
+                        sex,
+                        birthDate,
+                        email,
+                        phone,
+                        address,
+                        nationality
+                    };
+
+                    fetch("/contact", {
+                        method: "POST",
+                        headers:{
+                            "Content-type":"application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                });
+            });
+        </script>
+    </div>
+    
+   <!-- Nav Transform Logic-->
+    <script>
+        var menulist =document.getElementById('nav');
+        menulist.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if(menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "100vh"
+            }
+            else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- Services Transform Logic -->
+    <script>
+        document.querySelectorAll('#service .box').forEach(box => {
+            box.addEventListener('click', function() {
+                // Lấy icon (biểu tượng) trong box đã được click
+                const iconClass = this.querySelector('i').classList[1]; // Lấy class thứ hai của icon
+
+                // Xác định hình ảnh tương ứng với iconClass
+                let imagePath = '';
+                switch (iconClass) {
+                    case 'fa-champagne-glasses':
+                        imagePath = '../assets/img/services-1.jpg'; // Đường dẫn đến hình ảnh của Delicious Food
+                        break;
+                    case 'fa-person-swimming':
+                        imagePath = '../assets/img/services-2.jpg'; // Đường dẫn đến hình ảnh của Swimming Pool
+                        break;
+                    case 'fa-utensils':
+                        imagePath = '../assets/img/services-3.jpg'; // Đường dẫn đến hình ảnh của Inhouse Restaurant
+                        break;
+                    case 'fa-spa':
+                        imagePath = '../assets/img/services-4.jpg'; // Đường dẫn đến hình ảnh của Beautiful Spa
+                        break;
+                    default:
+                        imagePath = '../assets/img/services.jpg'; // Hình ảnh mặc định
+                        break;
+                }
+
+                // Thay đổi hình ảnh trong phần right
+                const imgElement = document.querySelector('#service .right img');
+                imgElement.classList.add('hidden');
+
+                // Đợi 300ms (thời gian transition) trước khi cập nhật hình ảnh mới
+                setTimeout(() => {
+                    imgElement.src = imagePath;
+
+                    // Đánh dấu hình ảnh mới là hiển thị và kích hoạt hiệu ứng fade-in
+                    imgElement.classList.remove('hidden');
+                }, 200);
+            });
+        });
+    </script>
+
+    <!-- Default Available Date -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy ngày hiện tại và ngày mai
+            var today = new Date();
+            var tomorrow = new Date();
+            tomorrow.setDate(today.getDate() + 1); // Ngày mai
+
+            // Format ngày để có thể set giá trị cho input type="date"
+            var formattedToday = today.toISOString().substr(0, 10); // YYYY-MM-DD
+            var formattedTomorrow = tomorrow.toISOString().substr(0, 10); // YYYY-MM-DD
+
+            // Đặt giá trị mặc định cho các trường ngày đến và ngày đi
+            document.getElementById('arrivalDate').value = formattedToday;
+            document.getElementById('departureDate').value = formattedTomorrow;
+            
+        });
+    </script>
+
+    <!-- Available Date Condition -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy các phần tử DOM của ngày đến và ngày đi trên trang chính
+            var arrivalDateInput = document.getElementById('arrivalDate');
+            var departureDateInput = document.getElementById('departureDate');
+
+            // Gán sự kiện 'change' cho ô nhập liệu ngày đến (arrivalDate)
+            arrivalDateInput.addEventListener('change', function() {
+                var arrivalDate = new Date(arrivalDateInput.value);
+                var departureDate = new Date(departureDateInput.value);
+
+                // Kiểm tra nếu ngày đến (arrivalDate) lớn hơn hoặc bằng ngày đi (departureDate)
+                if (arrivalDate >= departureDate) {
+                    alert('Ngày đến phải trước ngày đi. Vui lòng chọn lại.');
+                    arrivalDateInput.value = ''; // Xóa giá trị ngày đến
+                }
+            });
+
+            // Gán sự kiện 'change' cho ô nhập liệu ngày đi (departureDate)
+            departureDateInput.addEventListener('change', function() {
+                var arrivalDate = new Date(arrivalDateInput.value);
+                var departureDate = new Date(departureDateInput.value);
+
+                // Kiểm tra nếu ngày đến (arrivalDate) lớn hơn hoặc bằng ngày đi (departureDate)
+                if (arrivalDate >= departureDate) {
+                    alert('Ngày chọn không hợp lệ. Vui lòng chọn lại.');
+                    departureDateInput.value = ''; // Xóa giá trị ngày đi
+                }
+            });
+        });
+    </script>
+
+    <!-- Checkin && Checkout Date -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const arrivalInput = document.getElementById('arrivalDate');
+            const departureInput = document.getElementById('departureDate');
+            const checkinDateElement = document.querySelector('.checkin-date');
+            const checkoutDateElement = document.querySelector('.checkout-date');
+
+            // Hàm chuyển đổi định dạng ngày tháng
+            function formatDate(dateString) {
+                // Tạo đối tượng Date từ chuỗi YYYY-MM-DD
+                const dateObject = new Date(dateString);
+
+                // Danh sách tên tháng
+                const monthNames = [
+                    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+                ];
+
+                // Lấy các thành phần ngày, tháng, năm
+                const day = dateObject.getDate();
+                const monthIndex = dateObject.getMonth();
+                const year = dateObject.getFullYear();
+
+                // Định dạng lại thành "Jan, 5 2004"
+                const formattedDate = `${monthNames[monthIndex]}, ${day} ${year}`;
+
+                return formattedDate;
+            }
+
+            // Hàm để cập nhật ngày check-in và check-out khi ngày đến hoặc ngày đi thay đổi
+            function updateCheckInOutDates() {
+                const arrivalDate = arrivalInput.value;
+                const departureDate = departureInput.value;
+
+                // Định dạng lại ngày check-in và check-out
+                const formattedCheckinDate = formatDate(arrivalDate);
+                const formattedCheckoutDate = formatDate(departureDate);
+
+                // Cập nhật nội dung của các phần tử .checkin-date và .checkout-date
+                checkinDateElement.textContent = `Check-in date: ${formattedCheckinDate}`;
+                checkoutDateElement.textContent = `Check-out date: ${formattedCheckoutDate}`;
+            }
+
+            // Gọi hàm updateCheckInOutDates ngay sau khi DOM được tải
+            updateCheckInOutDates();
+
+            // Thêm sự kiện để cập nhật ngày check-in và check-out khi ngày đến hoặc ngày đi thay đổi
+            arrivalInput.addEventListener('change', updateCheckInOutDates);
+            departureInput.addEventListener('change', updateCheckInOutDates);
+        });
+    </script>
+
+    <!-- Nation Lists -->
+    <script>
+        const countrySelect = document.getElementById('customer-nationality');
+
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                // Lặp qua danh sách các quốc gia và tạo các option cho dropdown menu
+                data.forEach(country => {
+                    const countryName = country.name.common;
+                    const countryCode = country.cca2; // Mã quốc gia (nếu cần)
+                    
+                    const option = document.createElement('option');
+                    option.value = countryName; // Có thể đặt value là mã quốc gia
+                    option.textContent = countryName;
+                    countrySelect.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error('Lỗi khi gọi REST Countries API:', error);
+            });
+    </script>
+    
+    <!-- Book-now-btn -->
+    <script>
+        const buyBtns = document.querySelectorAll('.js-book-room')
+        const modal = document.querySelector('.js-modal')
+        const moodalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        // Hover Animation
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Hàm hiển thị modal đặt phòng (Thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        // Hàm ẩn modal đặt phòng (Gỡ class open vào modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        // Lặp qua từng thẻ button và nghe hành vi click
+        for(const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        // Nghe hành vi click vào button close
+        modalClose.addEventListener('click', hideBuyTickets)
+
+
+        moodalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
+
+    <!-- Get rooms quantity -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {         
+            // Gửi yêu cầu GET đến endpoint /rooms trên server
+            fetch('/rooms')
+                .then(response => response.json()) // Chuyển đổi phản hồi về dạng JSON
+                .then(data => {
+                    // Dữ liệu trả về từ server là một mảng các đối tượng { MALOAIP, AVAILABLE_ROOMS }
+                    data.forEach(room => {
+                        const { MALOAIP, AVAILABLE_ROOMS } = room;
+                        if (MALOAIP === 1) {
+                            console.log("VC");
+                            updateRoomSelect(1, AVAILABLE_ROOMS); 
+                        } else if (MALOAIP === 2) {
+                            console.log("VC2");
+                            updateRoomSelect(2, AVAILABLE_ROOMS); 
+                        } else if (MALOAIP === 3) {
+                            console.log("VC3");
+                            updateRoomSelect(3, AVAILABLE_ROOMS); 
+                        } else {
+                            console.log("VC4");
+                            updateRoomSelect(4, AVAILABLE_ROOMS); 
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching room data:', error);
+                });
+        });
+
+        function updateRoomSelect(maloaip, availableRooms) {
+            const selectElement = document.querySelector(`select.roomQuantity[data-maloaip="${maloaip}"]`);
+            if (selectElement) {
+                // Xóa các option hiện có trong combobox
+                selectElement.innerHTML = '';
+                
+                // Thêm các option mới vào combobox dựa trên số lượng phòng có sẵn (availableRooms)
+                for (let i = 0; i <= availableRooms; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.textContent = `${i} room${i !== 1 ? 's' : ''}`;
+                    selectElement.appendChild(option);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+                const checkButton = document.getElementById('checkButton');
+
+                checkButton.addEventListener('click', async function() {
+                    const arrivalInput = document.getElementById('arrivalDate').value;
+                    const departureInput = document.getElementById('departureDate').value;
+
+                    const formData = {
+                        arrivalInput,
+                        departureInput,
+                    };
+
+                    fetch("/contact1", {
+                        method: "POST",
+                        headers:{
+                            "Content-type":"application/json"
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                });
+            });
+    </script>
+</body>
+</html>
