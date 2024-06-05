@@ -1012,12 +1012,15 @@
             document.addEventListener('DOMContentLoaded', function() {
                 // Lấy phần tử nút "Book"
                 const bookButton = document.getElementById('bookButton');
+                const selectedRoomsTable = document.querySelector('.table');
+                const billContent = document.querySelector('.bill-content');
 
                 // Lắng nghe sự kiện click trên nút "Book"
                 bookButton.addEventListener('click', function(event) {
                     event.preventDefault(); // Ngăn chặn hành động mặc định của nút
 
                     // Thu thập dữ liệu từ các input field
+                    // Thông tin khách hàng
                     const fullName = document.getElementById('customer-name').value;
                     const identity = document.getElementById('customer-identity').value;
                     const sex = document.getElementById('customer-sex').value;
@@ -1026,6 +1029,38 @@
                     const phone = document.getElementById('customer-phone').value;
                     const address = document.getElementById('customer-address').value;
                     const nationality = document.getElementById('customer-nationality').value;
+
+                    //Thông tin ngày checkin và checkout
+                    const arrDate = document.getElementById('arrivalDate').value;
+                    const deDate = document.getElementById('departureDate').value;
+
+                    //Thông tin phòng
+                    const selectedRoomsData = [];
+                    const rows = selectedRoomsTable.querySelectorAll('.row');
+
+                    rows.forEach((row, index) => {
+                        if (index === 0) return; // Bỏ qua hàng đầu tiên
+
+                        const cells = row.querySelectorAll('.cell');
+                        const roomData = {
+                            room: cells[0].textContent,
+                            quantity: cells[1].textContent,
+                            nights: cells[2].textContent,
+                            price: cells[3].textContent.replace(/[₫,.]/g, '') // Chuyển thành số
+                        };
+                        selectedRoomsData.push(roomData);
+                    });
+
+                    //Thông tin hóa đơn
+                    const billItems = billContent.querySelectorAll('.content-item');
+                    const billData = {
+                        price: billItems[0]?.textContent.trim() || '',
+                        discount: billItems[1]?.textContent.trim() || '',
+                        total: billItems[2]?.textContent.trim() || ''
+                    };
+
+                    console.log(selectedRoomsData)
+
 
                     // Tạo đối tượng dữ liệu để gửi
                     const formData = {
@@ -1039,21 +1074,21 @@
                         nationality: nationality
                     };
 
-                    // Gửi yêu cầu POST đến server
-                    fetch('/contact', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        alert(data); // Hiển thị thông báo từ server
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    // // Gửi yêu cầu POST đến server
+                    // fetch('/contact', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify(formData)
+                    // })
+                    // .then(response => response.text())
+                    // .then(data => {
+                    //     alert(data); // Hiển thị thông báo từ server
+                    // })
+                    // .catch(error => {
+                    //     console.error('Error:', error);
+                    // });
                 });
             });
         </script>
