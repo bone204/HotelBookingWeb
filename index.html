@@ -139,7 +139,7 @@
                     <form class="grid" id="availabilityForm">
                         <input id="arrivalDate" type="date" placeholder="Arrival Date">
                         <input id="departureDate" type="date" placeholder="Departure Date">
-                        <input id="checkButton" class="primary-btn check-btn" type="submit" value="CHECK AVAILABILITY">
+                        <button id="checkButton" class="primary-btn" type="button">CHECK AVAILABILITY</button>
                     </form>
                 </div>
             </div>
@@ -868,6 +868,7 @@
             });
 
             document.addEventListener('DOMContentLoaded', function() {
+
                 const roomQuantities = document.querySelectorAll('.combobox');
                 const billContent = document.querySelector('.bill-content');
                 const arrivalInput = document.getElementById('arrivalDate');
@@ -1006,6 +1007,54 @@
 
                 // Trigger updateCheckInOutDates initially
                 updateCheckInOutDates();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Lấy phần tử nút "Book"
+                const bookButton = document.getElementById('bookButton');
+
+                // Lắng nghe sự kiện click trên nút "Book"
+                bookButton.addEventListener('click', function(event) {
+                    event.preventDefault(); // Ngăn chặn hành động mặc định của nút
+
+                    // Thu thập dữ liệu từ các input field
+                    const fullName = document.getElementById('customer-name').value;
+                    const identity = document.getElementById('customer-identity').value;
+                    const sex = document.getElementById('customer-sex').value;
+                    const birthDate = document.getElementById('customer-birth').value;
+                    const email = document.getElementById('customer-email').value;
+                    const phone = document.getElementById('customer-phone').value;
+                    const address = document.getElementById('customer-address').value;
+                    const nationality = document.getElementById('customer-nationality').value;
+
+                    // Tạo đối tượng dữ liệu để gửi
+                    const formData = {
+                        fullName: fullName,
+                        identity: identity,
+                        sex: sex,
+                        birthDate: birthDate,
+                        email: email,
+                        phone: phone,
+                        address: address,
+                        nationality: nationality
+                    };
+
+                    // Gửi yêu cầu POST đến server
+                    fetch('/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data); // Hiển thị thông báo từ server
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                });
             });
         </script>
     </div>
@@ -1174,25 +1223,24 @@
 
     <!-- Nation Lists -->
     <script>
-        const countrySelect = document.getElementById('customer-nationality');
+        document.addEventListener('DOMContentLoaded', () => {
+            const countrySelect = document.getElementById('customer-nationality');
 
-        fetch('https://restcountries.com/v3.1/all')
-            .then(response => response.json())
-            .then(data => {
-                // Lặp qua danh sách các quốc gia và tạo các option cho dropdown menu
-                data.forEach(country => {
-                    const countryName = country.name.common;
-                    const countryCode = country.cca2; // Mã quốc gia (nếu cần)
-                    
-                    const option = document.createElement('option');
-                    option.value = countryName; // Có thể đặt value là mã quốc gia
-                    option.textContent = countryName;
-                    countrySelect.appendChild(option);
+            fetch('https://restcountries.com/v3.1/all')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(country => {
+                        const countryName = country.name.common;
+                        const option = document.createElement('option');
+                        option.value = countryName;
+                        option.textContent = countryName;
+                        countrySelect.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Lỗi khi gọi REST Countries API:', error);
                 });
-            })
-            .catch(error => {
-                console.error('Lỗi khi gọi REST Countries API:', error);
-            });
+        });
     </script>
     
     <!-- Book-now-btn -->
@@ -1236,14 +1284,19 @@
 
     <!-- Get rooms quantity -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {         
+        const checkButton = document.getElementById('checkButton');
+
+        checkButton.addEventListener('click', function() {
             // Gửi yêu cầu GET đến endpoint /rooms trên server
+            event.preventDefault(); // Ngăn chặn hành động mặc định của nút
+            sendDataToServer();
             fetch('/rooms')
                 .then(response => response.json()) // Chuyển đổi phản hồi về dạng JSON
                 .then(data => {
                     // Dữ liệu trả về từ server là một mảng các đối tượng { MALOAIP, AVAILABLE_ROOMS }
                     data.forEach(room => {
                         const { MALOAIP, AVAILABLE_ROOMS } = room;
+                        console.log(room)
                         if (MALOAIP === 1) {
                             console.log("VC");
                             updateRoomSelect(1, AVAILABLE_ROOMS); 
@@ -1281,26 +1334,64 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-                const checkButton = document.getElementById('checkButton');
-
-                checkButton.addEventListener('click', async function() {
-                    const arrivalInput = document.getElementById('arrivalDate').value;
-                    const departureInput = document.getElementById('departureDate').value;
-
-                    const formData = {
-                        arrivalInput,
-                        departureInput,
-                    };
-
-                    fetch("/contact1", {
-                        method: "POST",
-                        headers:{
-                            "Content-type":"application/json"
-                        },
-                        body: JSON.stringify(formData)
-                    })
+            sendDataToServer(); // Gửi dữ liệu khi trang đã tải hoàn toàn
+            fetch('/rooms')
+                .then(response => response.json()) // Chuyển đổi phản hồi về dạng JSON
+                .then(data => {
+                    // Dữ liệu trả về từ server là một mảng các đối tượng { MALOAIP, AVAILABLE_ROOMS }
+                    data.forEach(room => {
+                        const { MALOAIP, AVAILABLE_ROOMS } = room;
+                        console.log(room)
+                        if (MALOAIP === 1) {
+                            console.log("VC");
+                            updateRoomSelect(1, AVAILABLE_ROOMS); 
+                        } else if (MALOAIP === 2) {
+                            console.log("VC2");
+                            updateRoomSelect(2, AVAILABLE_ROOMS); 
+                        } else if (MALOAIP === 3) {
+                            console.log("VC3");
+                            updateRoomSelect(3, AVAILABLE_ROOMS); 
+                        } else {
+                            console.log("VC4");
+                            updateRoomSelect(4, AVAILABLE_ROOMS); 
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching room data:', error);
                 });
+        });
+
+        function sendDataToServer() {
+            const arrivalDateInput = document.getElementById('arrivalDate');
+            const departureDateInput = document.getElementById('departureDate');
+
+            const arrivalDate = arrivalDateInput.value;
+            const departureDate = departureDateInput.value;
+
+            console.log(arrivalDate);
+            console.log(departureDate);
+
+            const formData = {
+                arrivalDate: arrivalDate,
+                departureDate: departureDate,
+            };
+            
+            fetch('/getdate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
+        }
     </script>
 </body>
 </html>
