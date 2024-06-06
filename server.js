@@ -32,7 +32,7 @@ app.get("/home", (req, res) => {
 });
 
 app.post("/contact", (req, res) => {
-    const { fullName, identity, sex, birthDate, email, phone, address, nationality } = req.body;
+    const { fullName, identity, sex, birthDate, email, phone, address, nationality, arrDate, deDate, price, discount, total, selectedRoomsData } = req.body;
     const insertQuery = `
         INSERT INTO KHACHHANG (TENKH, CCCD, GIOITINH, NGAYSINH, EMAIL, LOAIKH, SDT, DIACHI, QUOCTICH, TINHTRANG)
         VALUES (?, ?, ?, ?, ?, 1, ?, ?, ?, 1)

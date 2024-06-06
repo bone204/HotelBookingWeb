@@ -1071,24 +1071,30 @@
                         email: email,
                         phone: phone,
                         address: address,
-                        nationality: nationality
+                        nationality: nationality,
+                        arrDate: arrDate,
+                        deDate: deDate,
+                        price: billData.price,
+                        discount: billData.discount,
+                        total: billData.total,
+                        selectedRoomsData: selectedRoomsData,
                     };
 
-                    // // Gửi yêu cầu POST đến server
-                    // fetch('/contact', {
-                    //     method: 'POST',
-                    //     headers: {
-                    //         'Content-Type': 'application/json'
-                    //     },
-                    //     body: JSON.stringify(formData)
-                    // })
-                    // .then(response => response.text())
-                    // .then(data => {
-                    //     alert(data); // Hiển thị thông báo từ server
-                    // })
-                    // .catch(error => {
-                    //     console.error('Error:', error);
-                    // });
+                    // Gửi yêu cầu POST đến server
+                    fetch('/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        alert(data); // Hiển thị thông báo từ server
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
                 });
             });
         </script>
