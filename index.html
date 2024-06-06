@@ -1034,7 +1034,7 @@
                     const arrDate = document.getElementById('arrivalDate').value;
                     const deDate = document.getElementById('departureDate').value;
 
-                    //Thông tin phòng
+                    //Thông tin đặt phòng
                     const selectedRoomsData = [];
                     const rows = selectedRoomsTable.querySelectorAll('.row');
 
@@ -1046,7 +1046,7 @@
                             room: cells[0].textContent,
                             quantity: cells[1].textContent,
                             nights: cells[2].textContent,
-                            price: cells[3].textContent.replace(/[₫,.]/g, '') // Chuyển thành số
+                            price: (cells[3].textContent.match(/\d+/g) || []).join('')
                         };
                         selectedRoomsData.push(roomData);
                     });
@@ -1054,9 +1054,9 @@
                     //Thông tin hóa đơn
                     const billItems = billContent.querySelectorAll('.content-item');
                     const billData = {
-                        price: billItems[0]?.textContent.trim() || '',
-                        discount: billItems[1]?.textContent.trim() || '',
-                        total: billItems[2]?.textContent.trim() || ''
+                        price: (billItems[0]?.textContent.match(/\d+/g) || []).join(''),
+                        discount: (billItems[1]?.textContent.match(/\d+/g) || []).join(''),
+                        total: (billItems[2]?.textContent.match(/\d+/g) || []).join('')
                     };
 
                     console.log(selectedRoomsData)
@@ -1080,21 +1080,21 @@
                         selectedRoomsData: selectedRoomsData,
                     };
 
-                    // Gửi yêu cầu POST đến server
-                    fetch('/contact', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    })
-                    .then(response => response.text())
-                    .then(data => {
-                        alert(data); // Hiển thị thông báo từ server
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                    });
+                    // // Gửi yêu cầu POST đến server
+                    // fetch('/contact', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json'
+                    //     },
+                    //     body: JSON.stringify(formData)
+                    // })
+                    // .then(response => response.text())
+                    // .then(data => {
+                    //     alert(data); // Hiển thị thông báo từ server
+                    // })
+                    // .catch(error => {
+                    //     console.error('Error:', error);
+                    // });
                 });
             });
         </script>
