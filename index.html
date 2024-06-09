@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Opera Saigon Hotel</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/594/594106.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -139,7 +140,7 @@
                     <form class="grid" id="availabilityForm">
                         <input id="arrivalDate" type="date" placeholder="Arrival Date">
                         <input id="departureDate" type="date" placeholder="Departure Date">
-                        <button id="checkButton" class="primary-btn" type="button">CHECK AVAILABILITY</button>
+                        <button id="checkButton" class="primary-btn" type="button" onclick="scrollToSection('rooms')">CHECK AVAILABILITY</button>
                     </form>
                 </div>
             </div>
@@ -204,7 +205,7 @@
                     <p>Each room comes with a desk and a flat-screen TV, and certain rooms at the hotel have a balcony</p>
                 </div>
 
-                <div class="content mtop">
+                <div id="roomBottom" class="content mtop">
                     <div class="owl-carousel owl-carousel1 owl-theme">
                         <div class="item">
                             <div class="image">
@@ -1290,6 +1291,7 @@
         const modal = document.querySelector('.js-modal')
         const moodalContainer = document.querySelector('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
+        const bookbtn = document.getElementById('bookButton')
 
         // Hover Animation
         function scrollToSection(sectionId) {
@@ -1316,6 +1318,8 @@
 
         // Nghe hành vi click vào button close
         modalClose.addEventListener('click', hideBuyTickets)
+
+        bookbtn.addEventListener('click', hideBuyTickets)
 
 
         moodalContainer.addEventListener('click', function (event) {

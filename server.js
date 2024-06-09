@@ -14,7 +14,7 @@ var arDay = ''
 var deDay =''
 var p3 = ''
 
-sql.query(connectionString, p3, (err, rows) => {
+sql.query(connectionString, p, (err, rows) => {
     if (err) {
         console.error("Error querying database:", err);
     } else {
