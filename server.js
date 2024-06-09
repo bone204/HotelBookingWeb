@@ -8,19 +8,20 @@ const port = 3000;
 const connectionString = "server=.;Database=QLKS_LAOPERA;Trusted_Connection=Yes;Driver={SQL Server Native Client 11.0}";
 const kh = "SELECT * FROM KHACHHANG";
 const p = "SELECT MALOAIP, COUNT(*) AS AVAILABLE_ROOMS FROM PHONG GROUP BY MALOAIP";
+const pdp = "select * from PHIEUDATPHONG pdp, CHITIETPDP ct WHERE pdp.MAPDP = ct.MAPDP and ct.MALOAIP = 1"
 const p1 = "SELECT MALOAIP, COUNT(*) - 1 AS AVAILABLE_ROOMS FROM PHONG GROUP BY MALOAIP";
 const p2 = "SELECT MALOAIP, SUM(c.SOLUONG) AS AVAILABLE_ROOMS FROM PHIEUDATPHONG p INNER JOIN CHITIETPDP c ON p.MAPDP = c.MAPDP WHERE p.NGAYNHAN < ? AND p.NGAYTRA > ? GROUP BY MALOAIP";
 var arDay = ''
 var deDay =''
 var p3 = ''
 
-sql.query(connectionString, p, (err, rows) => {
-    if (err) {
-        console.error("Error querying database:", err);
-    } else {
-        console.log(rows);
-    }
-});
+// sql.query(connectionString, pdp, (err, rows) => {
+//     if (err) {
+//         console.error("Error querying database:", err);
+//     } else {
+//         console.log(rows);
+//     }
+// });
 
 // Cấu hình để phục vụ các tệp tĩnh từ thư mục hiện tại
 app.use(express.static(path.join(__dirname)));
@@ -39,11 +40,18 @@ app.post("/contact", async (req, res) => {
     console.log(selectedRoomsData);
 
     let quocTich = nationality;
+    let gioiTinh = sex;
     let loaiKhachHang = 2;
 
     if (nationality === "Vietnam") {
         quocTich = "Việt Nam";
         loaiKhachHang = 1;
+    }
+
+    if (sex === "male") {
+        gioiTinh = "Nam";
+    } else {
+        gioiTinh = "Nữ";
     }
 
     const currentDateTime = new Date();
@@ -94,7 +102,7 @@ app.post("/contact", async (req, res) => {
                 return;
             }
 
-            conn.query(insertCustomerQuery, [fullName, identity, sex, birthDate, email, loaiKhachHang, phone, address, quocTich], (err, customerResult) => {
+            conn.query(insertCustomerQuery, [fullName, identity, gioiTinh, birthDate, email, loaiKhachHang, phone, address, quocTich], (err, customerResult) => {
                 if (err) {
                     console.error("Error inserting customer:", err);
                     res.status(500).send("Error inserting customer into database");
@@ -161,7 +169,7 @@ app.post("/getdate", (req, res) => {
                 SELECT MALOAIP, SUM(c.SOLUONG) AS AVAILABLE_ROOMS
                 FROM PHIEUDATPHONG p
                 INNER JOIN CHITIETPDP c ON p.MAPDP = c.MAPDP
-                WHERE p.NGAYNHAN < ${arDay} AND p.NGAYTRA > ${deDay}
+                WHERE p.NGAYNHAN < ${deDay} AND p.NGAYTRA > ${arDay}
                 GROUP BY MALOAIP
             ) AS p2 ON p.MALOAIP = p2.MALOAIP
         `;
